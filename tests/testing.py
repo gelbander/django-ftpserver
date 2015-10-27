@@ -1,3 +1,4 @@
+print('------------------default setup--------------')
 def setup_django():
     from django.conf import settings
     if not settings.configured:
@@ -15,6 +16,7 @@ def setup_django():
                 'django_ftpserver',
             ),
             MIDDLEWARE_CLASSES=(),
+            FTPSERVER_ROOT='ftproot/',
         )
     from django import VERSION as version
     # In Django 1.7 or later, using "django.apps" module.

@@ -12,7 +12,6 @@ class Command(BaseCommand):
         except Exception as e:
             print(e)
         if os.path.exists(ftp_root):
-            sys.stdout.write(
-                "Error: {ftp_root} already exists.\n".format(ftp_root=ftp_root))
-        else:
-            os.makedirs(ftp_root)
+            raise CommandError(
+                "{ftp_root} already exists.\n".format(ftp_root=ftp_root))
+        os.makedirs(ftp_root)

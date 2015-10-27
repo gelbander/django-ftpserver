@@ -1,7 +1,6 @@
 from django.utils import timezone
 from django.test import TestCase
 
-
 class UserAccountTest(TestCase):
     def _getOne(self):
         from django_ftpserver import models
