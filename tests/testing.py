@@ -1,4 +1,3 @@
-print('------------------default setup--------------')
 def setup_django():
     from django.conf import settings
     if not settings.configured:
